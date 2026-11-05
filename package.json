@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test:unit": "node --test tests/*.test.cjs",
+    "build": "webpack --config webpack.config.mjs --mode production",
+    "test": "npm run test:unit && npm run build"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^14.0.0",
+    "web-ext-plugin": "^2.13.0",
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.3.1"
+  },
+  "dependencies": {
+    "web-ext": "^10.8.0"
+  }
+}

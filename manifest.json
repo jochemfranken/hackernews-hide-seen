@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Hacker News Hide Seen",
+  "version": "1.0",
+
+  "description": "A HackerNews extension to focus on unread Hacker News stories.",
+
+  "permissions": ["storage", "downloads"],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hackernews-hide-seen@jochem.franken",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://news.ycombinator.com/*"],
+      "js": ["hide-seen.js"]
+    }
+  ]
+}
